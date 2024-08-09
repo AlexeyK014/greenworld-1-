@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { closeQuickModal } from '@/context/modals'
 import { formatPrice, removeOverflowHiddenFromBody } from '@/lib/utils/common'
 import styles from '@/styles/quick-view-modal/index.module.scss'
@@ -23,7 +24,6 @@ const QuickViewModal = () => {
     product,
     selectedSize,
     setSelectedSize,
-    // cartItemBySize,
     handleAddToCart,
     addToCartSpinner,
     updateCountSpinner,
@@ -116,6 +116,7 @@ const QuickViewModal = () => {
             <div className={styles.modal__right__bottom__inner}>
               {/* если не пустая строчка, если юзер не выбрал размер показываем по дефолту*/}
               {!!selectedSize ? (
+                //@ts-ignore
                 <ProductCounter
                   className={`counter ${styles.modal__right__bottom__counter}`}
                   count={count}

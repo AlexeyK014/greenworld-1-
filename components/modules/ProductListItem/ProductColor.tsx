@@ -7,7 +7,7 @@ const ProductColor = ({ color }: { color: string }) => {
 
   return (
     <span className={styles.product__color}>
-      {translations[lang].catalog.color}: {translations[lang].catalog.color}
+      {(translations[lang].catalog as { [index: string]: string })[color]}
     </span>
   )
 }

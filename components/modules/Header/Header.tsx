@@ -17,7 +17,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { loginCheckFx } from '@/api/auth'
 import { useEffect } from 'react'
-import { $user } from '@/context/user'
 import { useCartByAuth } from '@/hooks/useCartByAuth'
 import {
   addProductsFromLSToCart,
@@ -30,7 +29,6 @@ const Header = () => {
   const { lang, translations } = useLang()
   const isAuth = useUnit($isAuth) // проверяем залогинен юзер или нет
   const loginChekSpinner = useUnit(loginCheckFx.pending)
-  const user = useUnit($user)
   const currentCartByAuth = useCartByAuth()
 
   console.log(currentCartByAuth)

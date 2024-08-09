@@ -3,7 +3,11 @@ import { ICartItem } from '@/types/cart'
 import { IProduct } from '@/types/common'
 import { handleShowSizeTable, idGenerator, isUserAuth } from './common'
 import toast from 'react-hot-toast'
-import { addProductToCart, setCartFromLS, setShouldShowEmpty } from '@/context/cart'
+import {
+  addProductToCart,
+  setCartFromLS,
+  setShouldShowEmpty,
+} from '@/context/cart'
 import { productsWithoutSizes } from '@/constants/product'
 
 // добавление товара в корзину с запросом на сервер

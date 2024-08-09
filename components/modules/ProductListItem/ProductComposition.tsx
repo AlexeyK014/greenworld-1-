@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useLang } from '@/hooks/useLang'
 import styles from '@/styles/product-list-item/index.module.scss'
 
@@ -7,8 +8,8 @@ const ProductComposition = ({ composition }: { composition: string }) => {
     <span className={styles.product__composition}>
       {translations[lang].product.composition}:{' '}
       {/**eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      {/* @ts-ignore */}
-      {translations[lang].product[composition]}
+       * @ts-ignore */}
+      {translations[lang].catalog[composition]}
     </span>
   )
 }

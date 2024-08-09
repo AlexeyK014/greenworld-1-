@@ -12,8 +12,6 @@ export const closeQuickModal = modals.createEvent()
 export const showQuickModal = modals.createEvent()
 export const closeSizeTable = modals.createEvent()
 export const showSizeTable = modals.createEvent()
-// export const openProfile = modals.createEvent()
-// export const closeProfile = modals.createEvent()
 
 export const $menuIsOpen = modals
   .createStore(false)
@@ -39,8 +37,3 @@ export const $showSizeTable = modals
   .createStore(false)
   .on(closeSizeTable, () => false)
   .on(showSizeTable, () => true)
-
-// export const $profileIsOpen = modals
-//   .createStore(false)
-//   .on(openProfile, () => true)
-//   .on(closeProfile, () => false)
